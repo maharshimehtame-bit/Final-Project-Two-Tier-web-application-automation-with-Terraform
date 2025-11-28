@@ -9,6 +9,7 @@ variable "instance_type" {
   default = "t3.micro"
 }
 
+
 module "network" {
   source = "../../modules/network"
   vpc_cidr = "10.100.0.0/16"

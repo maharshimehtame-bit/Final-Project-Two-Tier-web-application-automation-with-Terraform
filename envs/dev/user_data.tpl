@@ -3,6 +3,7 @@ yum install -y httpd awscli
 
 mkdir -p /var/www/html/images
 
+
 # Retry S3 copy because IAM/VPC may not be ready immediately
 for i in {1..10}; do
     aws s3 cp s3://${images_bucket}/ourimage.jpg /var/www/html/images/ourimage.jpg && break
